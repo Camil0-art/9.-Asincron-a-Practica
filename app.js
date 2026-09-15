@@ -1,19 +1,19 @@
-// Importación de módulos desde el archivo barril (Index.js) //
+/* Importación de módulos desde el archivo barril (Index.js) */
 import { index1, index2, index3, index4, index5 } from "./index.js";
 
-// Archivo Principal (app.js) (Punto de Entrada) //
+// Importación de la librería readline/promises
+import readline from "readline/promises";
+import { stdin as input, stdout as output } from "process";
 
-// Importación de módulos desde el archivo barril //
-
-// Importacion de libreria externa //
-import readline from "readline";
+// Creación de una única interfaz para toda la aplicación
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+  input,
+  output
 });
 
-// Creacion de la funcion menu (Principal) Para elegir el ejercicio //
-function menu() {
+
+// Creación de la función menu (Principal)
+async function menu() {
   console.log(`
 Seleccione el ejercicio:
 1. Ejercicio 1
@@ -23,35 +23,42 @@ Seleccione el ejercicio:
 5. Ejercicio 5
   `);
 
-  // muestra la consulta escribiéndola en la salida
-  rl.question("Opción: ", (opcion) => {
-    switch (opcion.trim()) {
-      case "1":
-        index1();
-        rl.close();
-        break;
-      case "2":
-        index2();
-        rl.close();
-        break;
-      case "3":
-        index3();
-        rl.close();
-        break;
-      case "4":
-        index4();
-        rl.close();
-        break;
-      case "5":
-        index5();
-        rl.close();
-        break;
-      default:
-        console.log("\nOpción inválida, vuelva a seleccionar un ejercicio.");
-        menu(); // Vuelve a pedir la opción si es inválida
-        break;
-    }
-  });
+  // Pedimos la opción al usuario y esperamos su respuesta
+  const opcion = await rl.question("Opción: ");
+
+  switch (opcion.trim()) {
+    case "1":
+      await index1(rl);
+      break;
+
+    case "2":
+      await index2(rl);
+      break;
+
+    case "3":
+      await index3(rl);
+      break;
+
+    case "4":
+      await index4(rl);
+      break;
+
+    case "5":
+      await index5(rl);
+      break;
+
+    default:
+      console.log("\nOpción inválida, vuelva a seleccionar un ejercicio.");
+      await menu();
+      break;
+  }
 }
 
-menu();
+// Ejecutamos el menú y cerramos readline al finalizar
+menu()
+  .catch((error) => {
+    console.error("Error en la aplicación:", error);
+  })
+  .finally(() => {
+    rl.close();
+  });
