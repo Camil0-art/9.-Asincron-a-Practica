@@ -1,5 +1,5 @@
 /* Importación de módulos desde el archivo barril (Index.js) */
-import { index1, index2, index3, index4, index5 } from "./index.js";
+import { TareasPendientes, UsuarioAlbumes, BusquedaPosts, usuarioNombreYTelefono, usuarioEnriquezido } from "./index.js";
 
 // Importación de la librería readline/promises
 import readline from "readline/promises";
@@ -28,23 +28,23 @@ Seleccione el ejercicio:
 
   switch (opcion.trim()) {
     case "1":
-      await index1(rl);
+      await TareasPendientes(rl);
       break;
 
     case "2":
-      await index2(rl);
+      await UsuarioAlbumes(rl);
       break;
 
     case "3":
-      await index3(rl);
+      await BusquedaPosts(rl);
       break;
 
     case "4":
-      await index4(rl);
+      await usuarioNombreYTelefono(rl);
       break;
 
     case "5":
-      await index5(rl);
+      await usuarioEnriquezido(rl);
       break;
 
     default:

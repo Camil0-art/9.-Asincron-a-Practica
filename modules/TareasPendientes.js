@@ -1,5 +1,5 @@
-// exportacion del ejercicio 1 (index1.js)
-export function index1() {
+// exportacion del ejercicio 1 
+export function TareasPendientes() {
 
     console.log("Usted se encuentra en el Ejercicio 1");
     // Lista de tareas pendientes de los usuarios del 1 al 10
