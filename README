@@ -1,0 +1,27 @@
+# Práctica de Asincronía y Manejo de APIs REST en JavaScript (Node.js)
+
+Proyecto desarrollado para la gestión y consumo asíncrono de datos mediante la API pública JSONPlaceholder, utilizando JavaScript moderno (ES6+), módulos ECMAScript y la arquitectura de comandos por interfaz de consola (CLI).
+
+---
+
+
+## 📁 Estructura del Proyecto
+
+```text
+Asincronia_Practica/
+├── modules/
+│   ├── TareasPendientes.js       # Ejercicio 1: Tareas no completadas por usuario
+│   ├── UsuarioAlbumes.js         # Ejercicio 2: Búsqueda de usuario y sus álbumes/fotos
+│   ├── BusquedaPosts.js          # Ejercicio 3: Filtro de posts y consulta de comentarios
+│   ├── usuarioNombreYTelefono.js # Ejercicio 4: Proyección simplificada de usuarios
+│   └── usuarioEnriquezido.js     # Ejercicio 5: Estructura de datos relacional anidada (Opcional)
+├── app.js                        # Menú principal e interfaz CLI (readline)
+├── index.js                      # Archivo barril (Re-exportación de módulos)
+├── DOCUMENTACION_TECNICA.md      # Especificación completa del código según guía
+└── DOCUMENTO_EVALUACION.md       # Matriz y plan de pruebas de evaluación
+
+---
+
+🛠️ Requisitos Previos e Inicialización
+Requisitos del Sistema
+Node.js: Versión 18.0.0 o superior (incluye la API nativa fetch).
