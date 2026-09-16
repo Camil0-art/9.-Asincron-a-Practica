@@ -1,5 +1,5 @@
 // Exportamos la función index5 para modularizar el ejercicio en la aplicación.
-export const index5 = () => {
+export const usuarioEnriquezido = () => {
 
   // Solicitamos todos los usuarios en una única petición inicial para obtener la lista base.
   fetch('https://jsonplaceholder.typicode.com/users')

@@ -1,4 +1,4 @@
-export const index4 = () => {
+export const usuarioNombreYTelefono = () => {
 
   // Se realiza la Consulta de todos los usuarios de la API
   fetch('https://jsonplaceholder.typicode.com/users')

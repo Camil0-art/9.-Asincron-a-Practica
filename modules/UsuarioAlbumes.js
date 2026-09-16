@@ -1,5 +1,5 @@
-// exportacion del ejercicio 2 (index2.js)
-export async function index2(rl) {
+// exportacion del ejercicio 2 
+export async function UsuarioAlbumes(rl) {
   console.log("\n=================================");
   console.log("   EJERCICIO 2: USUARIOS Y ÁLBUMES");
   console.log("=================================\n");
