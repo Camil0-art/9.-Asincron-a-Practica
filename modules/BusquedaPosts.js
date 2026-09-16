@@ -1,5 +1,5 @@
 // exportacion del ejercicio 3 (index3.js)
-export async function index3(rl) { // Recibe rl como parámetro para poder hacer preguntas al usuario
+export async function BusquedaPosts(rl) { // Recibe rl como parámetro para poder hacer preguntas al usuario
 
   console.log("\n==========================================");
   console.log("       EJERCICIO 3: POSTS Y COMENTARIOS");
